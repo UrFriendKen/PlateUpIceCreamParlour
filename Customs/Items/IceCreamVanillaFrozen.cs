@@ -9,7 +9,7 @@ namespace IceCreamParlour.Customs.Items
     public class IceCreamVanillaFrozen : CustomItem
     {
         public override string UniqueNameID => "iceCreamVanillaFrozen";
-        public override GameObject Prefab => PrefabManager.GetFrozenIceCreamInstance<IceCreamVanilla>(iceCreamMaterial: MaterialUtils.GetExistingMaterial("Vanilla"));
+        public override GameObject Prefab => PrefabManager.GetFrozenIceCreamInstance<IceCreamVanillaFrozen>(iceCreamMaterial: MaterialUtils.GetExistingMaterial("Vanilla"));
         public override Item DisposesTo => (Item)GDOUtils.GetExistingGDO(1626110274);   // Mixing Bowl - Empty
         public override int SplitCount => 1;
         public override float SplitSpeed => 1f;

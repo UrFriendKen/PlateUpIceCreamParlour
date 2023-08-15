@@ -20,7 +20,7 @@ namespace IceCreamParlour
     {
         public const string MOD_GUID = "IcedMilo.PlateUp.IceCreamParlour";
         public const string MOD_NAME = "Ice Cream Parlour";
-        public const string MOD_VERSION = "0.1.1";
+        public const string MOD_VERSION = "0.1.2";
         public const string MOD_AUTHOR = "IcedMilo";
         public const string MOD_GAMEVERSION = ">=1.1.5";
 
@@ -64,6 +64,23 @@ namespace IceCreamParlour
             FastFreezeProcess = AddGameDataObject<FastFreeze>();
 
             HandmadeIceCreamUnlock = AddGameDataObject<HandmadeIceCream>();
+
+
+
+            AddGameDataObject<PanBatterUncooked>();
+            AddGameDataObject<PanBatterCooked>();
+
+            AddGameDataObject<ConeUnrolled>();
+            AddGameDataObject<ConeRolled>();
+
+            AddGameDataObject<IceCreamConeVV>();
+            AddGameDataObject<IceCreamConeCC>();
+            AddGameDataObject<IceCreamConeSS>();
+            AddGameDataObject<IceCreamConeVC>();
+            AddGameDataObject<IceCreamConeVS>();
+            AddGameDataObject<IceCreamConeCS>();
+
+            AddGameDataObject<IceCreamCones>();
 
             LogInfo("Done loading game data.");
         }

@@ -1,7 +1,6 @@
 ﻿using Kitchen;
 using KitchenData;
 using KitchenLib.Customs;
-using KitchenLib.References;
 using KitchenLib.Utils;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,7 +17,7 @@ namespace IceCreamParlour.Customs.Items
             new Item.ItemProcess{
                 Duration = 2.5f,
                 IsBad = false,
-                Process = (Process)GDOUtils.GetExistingGDO(ProcessReferences.Knead),
+                Process = (Process)GDOUtils.GetExistingGDO(-523839730), // Knead
                 Result = GDOUtils.GetCastedGDO<Item, IceCreamVanilla>()
             }
         };
