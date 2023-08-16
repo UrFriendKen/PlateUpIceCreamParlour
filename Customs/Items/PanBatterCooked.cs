@@ -11,7 +11,7 @@ namespace IceCreamParlour.Customs.Items
         public override string UniqueNameID => "panBatterCooked";
         public override GameObject Prefab => PrefabManager.GetPanBatterInstance<PanBatterCooked>(batterMaterial: MaterialUtils.GetExistingMaterial("Cake"));
         public override Item DisposesTo => (Item)GDOUtils.GetExistingGDO(-622622812);   // Cookie Tin, to be replaced with custom pan
-        public override int SplitCount => 1;
+        public override int SplitCount => 3;
         public override float SplitSpeed => 1f;
         public override Item SplitSubItem => GDOUtils.GetCastedGDO<Item, ConeUnrolled>();
         public override List<Item> SplitDepletedItems => new List<Item>()

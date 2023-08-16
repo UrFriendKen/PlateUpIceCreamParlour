@@ -9,6 +9,10 @@ namespace IceCreamParlour.Customs.Items
 {
     public abstract class IceCreamConeBase : CustomItemGroup
     {
+        protected const int ICE_CREAM_VANILLA = 1570518340;
+        protected const int ICE_CREAM_CHOCOLATE = 502129042;
+        protected const int ICE_CREAM_STRAWBERRY = 186895094;
+
         public override sealed string UniqueNameID => GetType().Name;
 
         private readonly int _flavour1;
@@ -20,9 +24,9 @@ namespace IceCreamParlour.Customs.Items
 
         static Dictionary<int, string> _materialMap = new Dictionary<int, string>()
         {
-            { 1570518340, "Vanilla" },
-            { 502129042, "Chocolate" },
-            { 186895094, "Strawberry" }
+            { ICE_CREAM_VANILLA, "Vanilla" },
+            { ICE_CREAM_CHOCOLATE, "Chocolate" },
+            { ICE_CREAM_STRAWBERRY, "Strawberry" }
         };
 
         public IceCreamConeBase(int flavourID1, int flavourID2)
@@ -124,42 +128,42 @@ namespace IceCreamParlour.Customs.Items
 
     public class IceCreamConeVV : IceCreamConeBase
     {
-        public IceCreamConeVV() : base(1570518340, 1570518340)
+        public IceCreamConeVV() : base(ICE_CREAM_VANILLA, ICE_CREAM_VANILLA)
         {
         }
     }
 
     public class IceCreamConeCC : IceCreamConeBase
     {
-        public IceCreamConeCC() : base(502129042, 502129042)
+        public IceCreamConeCC() : base(ICE_CREAM_CHOCOLATE, ICE_CREAM_CHOCOLATE)
         {
         }
     }
 
     public class IceCreamConeSS : IceCreamConeBase
     {
-        public IceCreamConeSS() : base(186895094, 186895094)
+        public IceCreamConeSS() : base(ICE_CREAM_STRAWBERRY, ICE_CREAM_STRAWBERRY)
         {
         }
     }
 
     public class IceCreamConeVC : IceCreamConeBase
     {
-        public IceCreamConeVC() : base(1570518340, 502129042)
+        public IceCreamConeVC() : base(ICE_CREAM_VANILLA, ICE_CREAM_CHOCOLATE)
         {
         }
     }
 
     public class IceCreamConeVS : IceCreamConeBase
     {
-        public IceCreamConeVS() : base(1570518340, 186895094)
+        public IceCreamConeVS() : base(ICE_CREAM_VANILLA, ICE_CREAM_STRAWBERRY)
         {
         }
     }
 
     public class IceCreamConeCS : IceCreamConeBase
     {
-        public IceCreamConeCS() : base(502129042, 186895094)
+        public IceCreamConeCS() : base(ICE_CREAM_CHOCOLATE, ICE_CREAM_STRAWBERRY)
         {
         }
     }

@@ -50,20 +50,28 @@ namespace IceCreamParlour
             {
                 Entity applianceEntity = applianceEntities[j];
                 CAppliance appliance = appliances[j];
+                
+                int applianceID = appliance.ID;
+                if (Require(applianceEntity, out CLetterAppliance letterAppliance))
+                {
+                    applianceID = letterAppliance.ApplianceID;
+                }
 
-                if (appliance.ID == -1533430406)    // Source - Ice Cream
+                if (applianceID == -1533430406)    // Source - Ice Cream
                 {
                     EntityManager.DestroyEntity(applianceEntity);
                     continue;
                 }
-                if (appliance.ID == iceCreamStationID)
+                if (applianceID == iceCreamStationID)
                 {
                     hasIceCreamStation = true;
+                    continue;
                 }
             }
 
-            if (!hasIceCreamStation && Main.IceCreamStationAppliance != null)
+            if (!Has<SInit>() && !hasIceCreamStation && iceCreamStationID != 0)
             {
+                Set<SInit>();
                 int offset = 0;
                 List<Vector3> postTiles = GetPostTiles();
                 PostHelpers.CreateApplianceParcel(EntityManager, GetParcelTile(postTiles, ref offset), iceCreamStationID);

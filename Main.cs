@@ -67,20 +67,20 @@ namespace IceCreamParlour
 
 
 
-            AddGameDataObject<PanBatterUncooked>();
-            AddGameDataObject<PanBatterCooked>();
+            //AddGameDataObject<PanBatterUncooked>();
+            //AddGameDataObject<PanBatterCooked>();
 
-            AddGameDataObject<ConeUnrolled>();
-            AddGameDataObject<ConeRolled>();
+            //AddGameDataObject<ConeUnrolled>();
+            //AddGameDataObject<ConeRolled>();
 
-            AddGameDataObject<IceCreamConeVV>();
-            AddGameDataObject<IceCreamConeCC>();
-            AddGameDataObject<IceCreamConeSS>();
-            AddGameDataObject<IceCreamConeVC>();
-            AddGameDataObject<IceCreamConeVS>();
-            AddGameDataObject<IceCreamConeCS>();
+            //AddGameDataObject<IceCreamConeVV>();
+            //AddGameDataObject<IceCreamConeCC>();
+            //AddGameDataObject<IceCreamConeSS>();
+            //AddGameDataObject<IceCreamConeVC>();
+            //AddGameDataObject<IceCreamConeVS>();
+            //AddGameDataObject<IceCreamConeCS>();
 
-            AddGameDataObject<IceCreamCones>();
+            //AddGameDataObject<IceCreamCones>();
 
             LogInfo("Done loading game data.");
         }
